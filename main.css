@@ -1,0 +1,136 @@
+/* 
+* Created by : Shankar Lamichhane
+* Visit my Website: https://shankarlamichhane.com.np,
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(151 165 192);
+}
+.wrapper {
+    width: 350px;
+    background: #fff;
+    text-align: center;
+    padding: 40px 30px 50px 30px;
+    border-radius: 5px;
+    box-shadow: 1px 6px 6px 7px rgb(58 48 48 / 20%);
+}
+.wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+}
+.wrapper form {
+    margin: 40px 0;
+}
+
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+form .field.has-error {
+    animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+    0%, 100% {
+        margin-left: 0;
+    }
+    20%, 80% {
+        margin-left: -12px;
+    }
+    40%, 60% {
+        margin-left: 12px;
+    }
+}
+
+form .field .input-area {
+    position: relative;
+}
+
+form input {
+    height: 50px;
+    width: 100%;
+    padding: 0 45px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    border-bottom-width: 2px;
+    margin-bottom: 5px;
+}
+form .field.error input {
+    border-color: #f0061e;
+}
+form .field.is-valid input {
+    border-color: rgb(11, 105, 11);
+}
+form input::placeholder {
+    color: #bfbfbf;
+    font-size: 17px;
+}
+form .field i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+form .field .icon {
+    left: 15px;
+    color: #bfbfbf;
+}
+form .field .error-icon {
+    right: 15px;
+    color: #f0061e;
+}
+form .field .success {
+    right: 15px;
+    color: rgb(11, 105, 11);
+}
+
+form .field .error-text {
+    color: #f0061e;
+    text-align: left;
+    font-weight: 600;
+}
+form .field .error {
+    display: none;
+}
+form .field .success {
+    display: none;
+}
+form .field.error .error {
+    display: block;
+}
+form .field.is-valid .success {
+    display: block;
+}
+form .pass-link {
+    text-align: left;
+    margin-top: -10px;
+}
+.wrapper a {
+    color:rgb(59, 119, 230);
+    text-decoration: none;
+}
+.wrapper a:hover {
+    text-decoration: underline;
+}
+form input[type="submit"]{
+    margin-top: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: rgb(59, 119, 230);
+    transition: background 0.2s ease;
+}
+form input[type="submit"]:hover {
+    background: rgb(45, 0, 248);
+}
